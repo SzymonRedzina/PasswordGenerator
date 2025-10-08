@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+}
+body, html, #root {
+  height: 100%;
+  margin: 0;
+}
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background: #f7f9fc;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+section {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 20px rgba(18,24,40,0.08);
+}
+
+.mainSection {
+  flex: 1;
+  min-width: 260px;
+}
+
+.sideSection {
+  width: 440px;
+  max-height: 72vh;
+  overflow: auto;
+}
+
+h2, h1 {
+  margin: 0 0 0.75rem 0;
+}
+
+.passwordSection {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  width: 100%;
+  max-width: 520px;
+  background: linear-gradient(180deg, rgba(250,250,253,1) 0%, rgba(245,247,251,1) 100%);
+  border: 1px solid rgba(10,50,90,0.04);
+  box-shadow: 0 6px 12px rgba(16,24,40,0.03);
+}
+
+.password {
+  font-size: 1.2rem;
+  min-width: 120px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.items {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.retry {
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.passwordStrength {
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.pw-weak { background: #e24b4b; }
+.pw-medium { background: #f08b2a; }
+.pw-strong { background: #2cb67d; }
+.pw-none { background: #bfc7d6; color: #24314f; }
+
+.copyBtn {
+  height: 48px;
+  padding: 0 14px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+.copyBtn.primary {
+  background: #0552d5;
+  color: white;
+}
+.copyBtn.ghost {
+  background: white;
+  border: 1px solid #0552d5;
+  color: #0552d5;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.passwordLenght {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+input[type=range] {
+  flex: 1;
+}
+
+.lengthBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: white;
+  cursor: pointer;
+}
+
+.inputs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.inputs label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  background: rgba(5,82,213,0.04);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.sideHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.oldPasswords {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  box-shadow: 0 6px 14px rgba(20,30,60,0.04);
+}
+
+.oldLeft {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+
+.oldText {
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 160px;
+}
+
+.oldActions {
+  display: flex;
+  gap: 6px;
+}
+
+.btnSmall {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btnCopy {
+  background: #eaf4ff;
+}
+
+.btnDel {
+  background: #ffeef0;
+}
+
+@media (max-width: 900px) {
+  section {
+    flex-direction: column;
+    padding: 0 8px;
+  }
+
+  .sideSection {
+    width: 100%;
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .password {
+    font-size: 1rem;
+  }
+  .oldText {
+    max-width: 120px;
+  }
+  .input {
+    padding: 0.45rem 0.6rem;
+  }
+  .copyBtn {
+    height: 44px;
+  }
+}
